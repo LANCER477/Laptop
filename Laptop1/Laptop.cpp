@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-Laptop::Laptop(const char* n, double pr, const char* mcpu, double prcpu, const char* mgpu, double prgpu, const char* mram, double prram, const char* mssd, double prssd) : cpu(mcpu, prcpu), gpu(mgpu, prgpu), ram(mram, prram), ssd(mssd, prssd)
+Laptop::Laptop(const char* n, double pr, const char* mcpu, double prcpu, const char* mgpu, double prgpu, const char* mram, double prram, const char* mssd, double prssd, const char* mm, double prm) : cpu(mcpu, prcpu), gpu(mgpu, prgpu), ram(mram, prram), ssd(mssd, prssd), mouse(mm,prm)
 {
     name = new char[strlen(n) + 1];
     strcpy_s(name, strlen(n) + 1, n);
@@ -11,7 +11,7 @@ Laptop::Laptop(const char* n, double pr, const char* mcpu, double prcpu, const c
 
 double Laptop::GetPrice()
 {
-    return price + cpu.GetPrice() + gpu.GetPrice() + ram.GetPrice() + ssd.GetPrice();
+    return price + cpu.GetPrice() + gpu.GetPrice() + ram.GetPrice() + ssd.GetPrice() + mouse.GetPrice();
 }
 
 void Laptop::Output()
@@ -21,7 +21,9 @@ void Laptop::Output()
         << "|GPU: " << gpu.GetModel() << "|" << endl
         << "|RAM: " << ram.GetModel() << "|" << endl
         << "|SSD: " << ssd.GetModel() << "|" << endl
-        << "Laptop PRICE = " << GetPrice();
+        << "|Mouse: " << mouse.GetModel() << "|" << endl
+        << "Laptop PRICE = " << GetPrice() << endl
+        << "Mouse PRICE = " << mouse.GetPrice() << endl;
 }
 
 Laptop::~Laptop()

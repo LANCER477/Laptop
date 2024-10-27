@@ -131,6 +131,7 @@
     <ClCompile Include="GPU.cpp" />
     <ClCompile Include="Laptop.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="RAM.cpp" />
     <ClCompile Include="SSD.cpp" />
   </ItemGroup>
@@ -138,6 +139,7 @@
     <ClInclude Include="CPU.h" />
     <ClInclude Include="GPU.h" />
     <ClInclude Include="Laptop.h" />
+    <ClInclude Include="Mouse.h" />
     <ClInclude Include="RAM.h" />
     <ClInclude Include="SSD.h" />
   </ItemGroup>

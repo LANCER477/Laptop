@@ -5,6 +5,6 @@ using namespace std;
 
 int main()
 {
-	Laptop laptop("Asus Zepherus", 540, "AMD Ryzen 5600x", 230, " RTX 3070TI", 350, "Corsair 64GB", 100, "Samsung 1TB", 350);
+	Laptop laptop("Asus Zepherus", 540, "AMD Ryzen 5600x", 230, " RTX 3070TI", 350, "Corsair 64GB", 100, "Samsung 1TB", 350, "Logitech Lighsync", 60);
 	laptop.Output();
 }
